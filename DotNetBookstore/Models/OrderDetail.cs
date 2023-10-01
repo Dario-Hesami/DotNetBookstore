@@ -1,4 +1,6 @@
-﻿namespace DotNetBookstore.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DotNetBookstore.Models
 {
     public class OrderDetail
     {
