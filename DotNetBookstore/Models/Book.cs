@@ -17,10 +17,11 @@ namespace DotNetBookstore.Models
 
 
         [Required]
+        [MaxLength(300)]
 
         public string Title { get; set; }
 
-        public string Image { get; set; }
+        public string? Image { get; set; }
 
 
 
