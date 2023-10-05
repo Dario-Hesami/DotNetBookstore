@@ -28,6 +28,7 @@ namespace DotNetBookstore.Models
         [Required]
 
         [Range(0.01, 999999)]
+        [DisplayFormat(DataFormatString = "{0:c}")] // c = MS currency format
 
         public decimal Price { get; set; }
 
@@ -36,7 +37,7 @@ namespace DotNetBookstore.Models
 
 
         //FK
-
+        [Display(Name = "Category")]
         public int CategoryId { get; set; }
 
 

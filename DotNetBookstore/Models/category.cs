@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace DotNetBookstore.Models
 {
@@ -7,9 +8,11 @@ namespace DotNetBookstore.Models
         // pk fields should always be called either {Model}Id or Id
         //[Display(Name = "Category ID")]
         //[Range(1, 999999)]
-
+        [Display(Name = "Category")]
         public int CategoryId { get; set; }
         [Required(ErrorMessage = "A customized error message... ")]
+
+        
         public string Name { get; set; }
 
     }

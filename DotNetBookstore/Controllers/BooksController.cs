@@ -48,7 +48,7 @@ namespace DotNetBookstore.Controllers
         // GET: Books/Create
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Name");
+            ViewData["CategoryId"] = new SelectList(_context.Categories.OrderBy(c => c.Name), "CategoryId", "Name");
             return View();
         }
 
@@ -67,6 +67,13 @@ namespace DotNetBookstore.Controllers
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Name", book.CategoryId);
             return View(book);
+        }
+
+        private static string UploadImage(IFormFile image)
+        {
+            var filePath = Path.GetTempFileName();
+
+            var fileName = Guid
         }
 
         // GET: Books/Edit/5
