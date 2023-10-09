@@ -69,12 +69,12 @@ namespace DotNetBookstore.Controllers
             return View(book);
         }
 
-        private static string UploadImage(IFormFile image)
-        {
-            var filePath = Path.GetTempFileName();
+        //private static string UploadImage(IFormFile image)
+        //{
+        //    var filePath = Path.GetTempFileName();
 
-            var fileName = Guid
-        }
+        //    var fileName = Guid
+        //}
 
         // GET: Books/Edit/5
         public async Task<IActionResult> Edit(int? id)
